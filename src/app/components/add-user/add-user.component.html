@@ -1,0 +1,23 @@
+<div class="card mx-5 my-3">
+  <div class="card-header">
+    Add User
+  </div>
+  <div class="card-body">
+        <form (ngSubmit)= "onSubmit()">
+            <div class="row">
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" placeholder="Name" [(ngModel)]= 'user.name' name="name"> 
+                </div>
+                <div class="col-sm-4">
+                    <input type="email" class="form-control" placeholder="Email" [(ngModel)]= 'user.email' name="email">
+                </div>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" placeholder="Phone" [(ngModel)]= 'user.phone' name="phone">
+                </div>
+            </div>
+            <div class="row mt-3">
+                <input type="submit" value="Add" class="btn btn-primary form-control form-control-lg">
+            </div>
+        </form>
+  </div>
+</div>

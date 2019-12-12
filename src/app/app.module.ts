@@ -9,17 +9,20 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { UserService } from './services/user.service';
 import { UsersComponent } from './components/users/users.component';
-
+import { AddUserComponent } from './components/add-user/add-user.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent
+    UsersComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase,'angularfs-crud-ops'),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FormsModule
   ],
   providers: [ UserService ],
   bootstrap: [AppComponent]
