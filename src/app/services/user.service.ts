@@ -49,6 +49,12 @@ export class UserService {
   deleteUser(user: User){
     console.log(user.name);
     this.userDoc= this.afs.doc(`users/${user.id}`);
-    console.log(this.userDoc.delete());
+    this.userDoc.delete();
+  }
+  
+  updateUser(user: User){
+    //alert(user.name);
+    this.userDoc= this.afs.doc(`users/${user.id}`);
+    this.userDoc.update(user);
   }
 }

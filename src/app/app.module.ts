@@ -11,6 +11,8 @@ import { UserService } from './services/user.service';
 import { UsersComponent } from './components/users/users.component';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { FormsModule } from '@angular/forms';
+
+
 @NgModule({
   declarations: [
     AppComponent,
