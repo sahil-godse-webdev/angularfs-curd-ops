@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { User } from '../../models/user';
+//import { userInfo } from 'os';
 
 @Component({
   selector: 'app-users',
@@ -15,6 +16,10 @@ export class UsersComponent implements OnInit {
     this.userService.getUsers().subscribe(users=>
       //console.log(users));
       this.users = users);
+  }
+
+  deleteUser(event, user){
+    this.userService.deleteUser(user);
   }
 
 }
